@@ -1,6 +1,6 @@
 -- by wsh @ 2017-08-30
 
--- ĞèÒª±»¼ÓÔØµÄÄ£¿é
+-- éœ€è¦è¢«åŠ è½½çš„æ¨¡å—
 local modules = {
 	'Test.TestClosure',
 	'HotFix.xLuaTest'
@@ -10,7 +10,7 @@ local modules = {
 	--'HotFix.UIRankMainTest',
 }
 
--- Ö§³ÖÖØÔØµÄÄ£¿é£¬µ÷ÊÔÓÃ£¨ĞŞ¸Älua´úÂë¿ÉÒÔ²»ÖØÆôUnity±à¼­Æ÷£©£¬·¢²¼¸üĞÂÊ±Çå¿Õ
+-- æ”¯æŒé‡è½½çš„æ¨¡å—ï¼Œè°ƒè¯•ç”¨ï¼ˆä¿®æ”¹luaä»£ç å¯ä»¥ä¸é‡å¯Unityç¼–è¾‘å™¨ï¼‰ï¼Œå‘å¸ƒæ›´æ–°æ—¶æ¸…ç©º
 local reloads = {
 	'HotFix.xLuaTest'
 	--'HotFix.UIArenaTest',
@@ -18,12 +18,12 @@ local reloads = {
 	--'HotFix.UIRankMainTest',
 }
 
--- ÏÈĞ¶ÔØÄ£¿é
+-- å…ˆå¸è½½æ¨¡å—
 for i,v in ipairs(reloads) do
 	package.loaded[v] = nil
 end
 
--- ÔÙ¼ÓÔØ/ÖØ¼ÓÔØÄ£¿é
+-- å†åŠ è½½/é‡åŠ è½½æ¨¡å—
 for i,v in ipairs(modules) do
 	if package.loaded[v] == nil then
 		require(v)
